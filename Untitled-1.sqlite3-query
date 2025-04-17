@@ -1,0 +1,43 @@
+-- database: c:\Users\я\Desktop\pytonProjects\Klovo\blog.db
+
+CREATE TABLE comments(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    text TEXT NOT NULL,
+    author TEXT  NOT NULL,
+    created TEXT DEFAULT CURRENT_TIMESTAMP
+
+);
+
+
+CREATE TABLE menu(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    text TEXT NOT NULL,
+    price INTEGER,
+    image TEXT
+    
+
+);
+
+INSERT INTO menu (title, text, price, image) VALUES
+('Піца "Маргарита"', 'Класична піца з томатним соусом, моцарелою та базиліком.', 120, 'images/margarita.jpg'),
+('Піца "Гавайська"', 'Піца з шинкою, ананасами, моцарелою і томатним соусом.', 130, 'images/hawaiian.jpg'),
+('Бургер "Класичний"', 'Соковитий бургер з яловичиною, салатом, помідорами та соусом.', 85, 'images/classic_burger.jpg'),
+('Бургер "Чеддер"', 'Бургер з яловичиною, соусом чеддер, беконом і салатом.', 95, 'images/cheddar_burger.jpg'),
+('Суші "Філадельфія"', 'Рис, лосось, авокадо, огірок та крем-сир.', 150, 'images/philadelphia_sushi.jpg'),
+('Суші "Каліфорнія"', 'Рис, крабові палички, авокадо, огірок і ікра масаго.', 160, 'images/california_sushi.jpg'),
+('Лазанья', 'Італійська лазанья з соусом болоньєзе, бешамель і сиром.', 180, 'images/lasagna.jpg'),
+('Ризотто з грибами', 'Ризотто з лісовими грибами, пармезаном і травами.', 140, 'images/mushroom_risotto.jpg'),
+('Стейк "Рибай"', 'Соковитий стейк рибай з картоплею фрі та соусом.', 250, 'images/ribeye_steak.jpg'),
+('Стейк "Т-бон"', 'Стейк з кісткою, приготований до ступеня середньої прожарки, з овочами.', 270, 'images/tbone_steak.jpg'),
+('Салат "Цезар"', 'Салат з куркою, романо, пармезаном, крутонами та соусом цезар.', 90, 'images/caesar_salad.jpg'),
+('Салат "Грецький"', 'Салат з огірками, помідорами, оливками, фетою, червоною цибулею і оливковою олією.', 100, 'images/greek_salad.jpg'),
+('Паста "Карбонара"', 'Паста з беконом, яйцем, сиром пармезан і вершковим соусом.', 150, 'images/carbonara_pasta.jpg'),
+('Паста "Болоньєзе"', 'Паста з соусом болоньєзе, яловичим фаршем, томатами і спеціями.', 160, 'images/bolognese_pasta.jpg'),
+('Курка в клярі', 'Філе курки в клярі з гарніром з овочів.', 120, 'images/klari_chicken.jpg'),
+('Курячий шніцель', 'Смажений курячий шніцель з картоплею пюре і овочами.', 130, 'images/chicken_schnitzel.jpg'),
+('Грильовані овочі', 'Мікс грильованих овочів: баклажан, цукіні, перець, помідори.', 70, 'images/grilled_vegetables.jpg'),
+('Чізкейк', 'Смачний чізкейк з ягодами та кремовою текстурою.', 80, 'images/cheesecake.jpg'),
+('Торт "Наполеон"', 'Класичний торт з листкового тіста та заварним кремом.', 90, 'images/napoleon_cake.jpg'),
+('Тірамісу', 'Тірамісу з маскарпоне, кавою і шоколадним декором.', 85, 'images/tiramisu.jpg');
+

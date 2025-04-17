@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <title>Про Нас - Klovo</title>
+
+</head>
+<body>
+    
+
+
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('index') }}">KLOVO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('menu') }}">Меню</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('comms') }}">Коментарі</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about') }}">Про нас</a>
+                    </li>
+                   
+                  
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    
+
+
+
+
+    <div class="container">
+        <h1>Про Нас</h1>
+        <p><strong>Ми Klovo</strong> (НЕ GLOVO) — найсучасніша, найшвидша і... всі інші прикметники, що нам точно не підходять!</p>
+
+        <p>Наша служба доставки працює ще з <span class="highlight">993 року до н.е.</span>.</p>
+
+        <p>Маємо офіси в найвідоміших мегаполісах світу: <em>Новий Житомир, Прямий Ріг</em> та звісно ж Вінниця, <em></em>.</p>
+
+        <p>Ми доставляємо всюди — окрім Тернопіля</span>. (Але якщо ви дасте 15 грн то ми подумаємо).</p>
+
+        <p>Наш слоган: <em>“Klovo — іноді доставляємо, іноді — ні. Але завжди з душею!”</em></p>
+
+        <p>Klovo — офіційний партнер таких гігантів як <strong>Coggle</strong>, <strong>Fetlix</strong>, <strong>McKonalds</strong>, <strong>Miclosoft</strong> і <strong>Луцька міська рада</strong> </p>
+
+        
+
+        <p>Наші кур’єри — не просто люди. Це іноді люди. Інколи — голуби, їжаки або навіть  повідомлення через Wi-Fi 2G.</p>
+
+        <p>Ми також пропонуємо преміум-сервіс: <strong>Klovo LUX™</strong> — він нічого не дає,взагалі нічого але купіть будь ласка.</p>
+
+        <p>Підтримка Klovo працює цілодобово. Ну, майж (Ніколи).</p>
+
+        <p>Всі замовлення  побажанням “Хай прийде”.</p>
+
+        <p>Ми не гарантуємо нічого, але обіцяємо, що спробуємо... якщо буде настрій.</p>
+
+        <p class="call">Тож навіщо чекати? Зробіть своє замовлення вже зараз — і воно прийде... може... колись... або вже пішло до вас, просто ви ще не знаєте.</p>
+
+        <a href="{{ url_for('menu') }}" class="order-button">Замовити зараз (на свій страх і ризик)</a>
+        <p class="disclaimer">
+            *Компанія Klovo не несе відповідальності за: втрату посилок, їх появу з майбутнього, затримки понад 400 років, метеоритні дощі, викрадення інопланетян, виведення замовлення в стратосферу, відхилення до місця доставки понад 150 світлових років, або якщо ваше замовлення прийде у вигляді спогадів.
+        </p>
+    </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 KLOVO. Всі права вигадані тому будь ласка не крадіть сайт 😄</p>
+            <p>Контакти: <a href="mailto:klovo@example.com">klovoNePyshitSudy@gmail.com</a> | +38 14 993 99</p>
+            <p><a href="{{ url_for('polityka') }}">Політика конфіденційності</a> | <a href="{{ url_for('polityka') }}">Умови використання</a></p>
+        </div>
+    </footer>
+    
+    </body>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
