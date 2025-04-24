@@ -29,6 +29,10 @@ def polityka():
 def about():
     return render_template("about.html")
 
+@app.route("/alert")
+def alert():
+    return render_template("alert.html")
+
 
 
 @app.route("/menu")  # Вказуємо url-адресу для виклику функції
@@ -62,6 +66,13 @@ def delete_comment(comment_id):
         conn.execute("DELETE FROM comments WHERE id = ?", (comment_id,))
     return redirect('/')
    
+
+@app.route("/article/<int:menu_id>")
+def article_page(menu_id):  
+    article = get_article(menu_id)
+    return render_template("article_page.html", article=article)
+
+
 
 
 if __name__ == "__main__":

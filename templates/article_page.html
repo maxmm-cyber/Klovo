@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<img src="{{ url_for('static', filename=article[4]) }}" class="article-img" alt="...">
+<h3 class="card-title">{{article[1]}}</h3>
+<h5 class="card-text">{{article[2]}}</h5>
+<h5 class="card-text">{{article[3]}} грн.</h4>
+
+
+
+    
+        <h4>Оформити замовлення</h4>
+        <form method="POST">
+            <label for="customer_name">Ім'я:</label>
+            <input type="text" id="customer_name" name="customer_name" required>
+            
+            <label for="delivery_address">Адреса для доставки:</label>
+            <textarea id="delivery_address" name="delivery_address" required></textarea>
+            
+            <a href="{{ url_for('alert') }}" class="order-button">Замовити</a>
+        </form>
+
+        
+
+
+{% endblock content %}

@@ -545,3 +545,17 @@ p {
       grid-template-columns: 1fr; /* 1 картка в рядку на малих екранах */
   }
 }
+.article-img {
+    max-width: 600px;       /* Трохи більша */
+    width: 100%;            /* Адаптивна ширина */
+    height: auto;
+    display: block;         /* Щоб працював margin auto */
+    margin: 20px auto;      /* Центрування */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Тінь — красиво */
+}
+h1{
+
+  color: #0051ff;
+
+}

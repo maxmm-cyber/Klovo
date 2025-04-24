@@ -56,7 +56,9 @@
                     <h5 class="card-title">{{ article[1] }}</h5>
                     <p class="card-description">{{ article[2] }}</p>
                     <span class="card-price">{{ article[3] }} грн</span>
-                    <a href="#" class="order-btn">Замовити</a>
+                    <a href="{{ url_for('article_page', menu_id=article[0]) }}" class="order-btn">Замовити</a>
+
+
                 </div>
             </div>
         {% endfor %}

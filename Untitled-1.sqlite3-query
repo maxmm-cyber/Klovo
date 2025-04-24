@@ -19,6 +19,17 @@ CREATE TABLE menu(
 
 );
 
+
+CREATE TABLE orders (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    article_id INTEGER,
+    name TEXT,
+    address TEXT,
+    FOREIGN KEY(article_id) REFERENCES menu(id)
+);
+
+
+
 INSERT INTO menu (title, text, price, image) VALUES
 ('Піца "Маргарита"', 'Класична піца з томатним соусом, моцарелою та базиліком.', 120, 'images/margarita.jpg'),
 ('Піца "Гавайська"', 'Піца з шинкою, ананасами, моцарелою і томатним соусом.', 130, 'images/hawaiian.jpg'),
