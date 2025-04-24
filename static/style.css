@@ -1,23 +1,22 @@
-/* Змінити колір всіх посилань у navbar */
+
 .navbar .nav-link {
     color: rgb(255, 187, 0) !important;
     font-weight: bold;
     
   }
   
-  /* Змінити колір при наведенні */
+
   .navbar .nav-link:hover {
     color: rgb(255, 213, 0) !important;
     font-weight: bold;
   }
   
-  /* Змінити колір назви бренду (KLOVO) */
   .navbar .navbar-brand {
     color: rgb(255, 213, 0) !important;
     font-weight: bold;
   }
   
-  /* Якщо хочеш змінити ще й випадаючі пункти */
+
   .navbar .dropdown-item {
     color: rgb(255, 183, 0) !important;
     font-weight: bold;
@@ -29,9 +28,9 @@
   }
 
   .navbar {
-    background: linear-gradient(to left, #06be06, #0cac11); /* Наприклад, ніжно-зелений */
+    background: linear-gradient(to left, #06be06, #0cac11); 
   }
-/* Наприклад, зробити текст посилань жирним */
+
 .navbar .nav-link {
     font-weight: bold;
   }
@@ -174,11 +173,10 @@ body {
     color: white;
     padding: 20px;
     text-align: center;
-    margin-top: auto; /* Відсуває футер до низу */
+    margin-top: auto;
     position: relative;
   }
 
-  /* Стилі для навбару */
   .navbar {
     position: sticky;
     top: 0;
@@ -186,16 +184,16 @@ body {
   }
 
   #carouselExample {
-    max-height: 500px; /* Встановлюємо максимальну висоту для каруселі */
-    overflow: hidden; /* Якщо зображення вище, приховати його частину */
+    max-height: 500px; 
+    overflow: hidden; 
   }
 
   .carousel-inner {
-    max-height: 500px; /* Те саме для внутрішнього блоку каруселі */
+    max-height: 500px; 
   }
 
   .carousel-item img {
-    object-fit: cover; /* Зображення заповнюють контейнер, не розтягуються */
+    object-fit: cover;
     width: 100%;
     height: 100%;
   }
@@ -287,13 +285,13 @@ body {
   box-sizing: border-box;
 }
 
-/* При наведенні на картку */
+
 .comment:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Стиль для тексту */
+
 .comment strong {
   font-size: 1.2em;
   color: #333;
@@ -304,7 +302,7 @@ body {
   font-size: 0.9em;
 }
 
-/* Стиль для кнопки видалення */
+
 .comment button {
   background-color: #ff4d4d;
   color: white;
@@ -454,16 +452,16 @@ p {
 
 
 
-/* Контейнер для карток */
+
 .menu-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 картки в рядок */
-  gap: 30px; /* Відстань між картками */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px; 
   justify-items: center;
   padding: 20px;
   width: 100%;
   max-width: 1200px;
-  /* Додаємо вирівнювання по центру */
+  
   margin: 0 auto;
 }
 
@@ -471,7 +469,7 @@ p {
 .menu-card {
   background: #fff;
   border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Тінь для картки */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   width: 100%;
   max-width: 350px;
@@ -480,16 +478,16 @@ p {
 }
 
 .menu-card:hover {
-  transform: translateY(-10px); /* Підйом картки при наведенні */
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15); /* Більш виразна тінь */
+  transform: translateY(-10px); 
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15); 
 }
 
-/* Стилі для зображення картки */
+
 .card-img {
   width: 100%;
   height: 250px;
   object-fit: cover;
-  border-bottom: 2px solid #f0f0f0; /* Легка лінія під зображенням */
+  border-bottom: 2px solid #f0f0f0; 
 }
 
 /* Контент картки */
@@ -514,7 +512,7 @@ p {
 .card-price {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #e91e63; /* Червоний колір для ціни */
+  color: #e91e63; 
   margin-bottom: 15px;
 }
 
@@ -530,29 +528,29 @@ p {
 }
 
 .order-btn:hover {
-  background-color: #c2185b; /* Колір кнопки при наведенні */
+  background-color: #c2185b; 
 }
 
-/* Адаптивність для менших екранів */
+
 @media (max-width: 1024px) {
   .menu-container {
-      grid-template-columns: repeat(2, 1fr); /* 2 картки в рядку на середніх екранах */
+      grid-template-columns: repeat(2, 1fr); 
   }
 }
 
 @media (max-width: 768px) {
   .menu-container {
-      grid-template-columns: 1fr; /* 1 картка в рядку на малих екранах */
+      grid-template-columns: 1fr; 
   }
 }
 .article-img {
-    max-width: 600px;       /* Трохи більша */
-    width: 100%;            /* Адаптивна ширина */
+    max-width: 600px;       
+    width: 100%;           
     height: auto;
-    display: block;         /* Щоб працював margin auto */
-    margin: 20px auto;      /* Центрування */
+    display: block;         
+    margin: 20px auto;      
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Тінь — красиво */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 h1{
 

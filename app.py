@@ -35,11 +35,11 @@ def alert():
 
 
 
-@app.route("/menu")  # Вказуємо url-адресу для виклику функції
+@app.route("/menu")  
 def menu():
-    articles = get_all_articles()  # Отримуємо всі статті з бази даних
+    articles = get_all_articles()  
     
-    return render_template("menu.html", articles=articles)  # Передаємо articles в шаблон 
+    return render_template("menu.html", articles=articles)  
 
 @app.route('/comms', methods=['GET', 'POST'])
 def comms():
@@ -76,5 +76,5 @@ def article_page(menu_id):
 
 
 if __name__ == "__main__":
-    app.config['TEMPLATES_AUTO_RELOAD'] = True  # автоматичне оновлення шаблонів
-    app.run(debug=True)  # Запускаємо веб-сервер з цього файлу в режимі налагоджея
+    app.config['TEMPLATES_AUTO_RELOAD'] = True 
+    app.run(debug=True)  
