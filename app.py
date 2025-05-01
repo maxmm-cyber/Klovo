@@ -32,6 +32,11 @@ def about():
 @app.route("/alert")
 def alert():
     return render_template("alert.html")
+@app.route("/search")
+def search():
+    query = request.args.get('query',"")
+    articles = search_articles(query)
+    return render_template("search.html",articles=articles)
 
 
 
@@ -60,6 +65,19 @@ def comms():
 
     return render_template('comms.html', comments=comments)
 
+
+def insert_order(name, address):
+    with sqlite3.connect(DB) as conn:
+        cursor = conn.cursor()
+        cursor.execute("INSERT INTO orders (name, address) VALUES (?, ?)", (name, address))
+        conn.commit()
+
+def get_all_orders():
+    with sqlite3.connect(DB) as conn:
+        cursor = conn.cursor()
+        cursor.execute("SELECT name, address FROM orders")
+        return cursor.fetchall()
+
 @app.route('/delete/<int:comment_id>', methods=['POST'])
 def delete_comment(comment_id):
     with sqlite3.connect(DB) as conn:
@@ -71,6 +89,20 @@ def delete_comment(comment_id):
 def article_page(menu_id):  
     article = get_article(menu_id)
     return render_template("article_page.html", article=article)
+
+@app.route('/submit_order', methods=['POST'])
+def submit_order():
+    name = request.form.get('name')
+    address = request.form.get('address')
+    insert_order(name, address)
+    return redirect('/orders')
+
+@app.route('/orders')
+def orders():
+    all_orders = get_all_orders()
+    return render_template('orders.html', orders=all_orders)
+
+
 
 
 

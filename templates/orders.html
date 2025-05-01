@@ -1,0 +1,15 @@
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h1>Список замовлень</h1>
+<ul>
+    {% for name, address in orders %}
+        <li><strong>{{ name }}</strong>: {{ address }}</li>
+    {% endfor %}
+</ul>
+
+    
+{% endblock content %}

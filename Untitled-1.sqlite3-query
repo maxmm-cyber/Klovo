@@ -20,13 +20,15 @@ CREATE TABLE menu(
 );
 
 
+
 CREATE TABLE orders (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    article_id INTEGER,
+    
     name TEXT,
-    address TEXT,
-    FOREIGN KEY(article_id) REFERENCES menu(id)
+    address TEXT
+    
 );
+
 
 
 

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+
+
+
+<h2 class="m-5 text-center">Меню</h2>
+<div class="menu-container">
+    {% for article in articles %}
+        <div class="menu-card">
+            <img src="{{ url_for('static', filename=article[4]) }}" class="card-img" alt="{{ article[1] }}">
+            <div class="card-content">
+                <h5 class="card-title">{{ article[1] }}</h5>
+                <p class="card-description">{{ article[2] }}</p>
+                <span class="card-price">{{ article[3] }} грн</span>
+                <a href="{{ url_for('article_page', menu_id=article[0]) }}" class="order-btn">Замовити</a>
+
+
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock content %} 
