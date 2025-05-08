@@ -16,7 +16,6 @@ db = SQLAlchemy(app)
     
 @app.route("/")  # Вказуємо url-адресу для виклику функції
 def index():
-    #articles = get_all_articles()
     
 
     return render_template("index.html")
@@ -54,6 +53,7 @@ def comms():
 
         with sqlite3.connect(DB) as conn:
             conn.execute("INSERT INTO comments (author, text) VALUES (?, ?)", (nickname, comment))
+            conn.commit()
 
                          
 
@@ -61,6 +61,7 @@ def comms():
 
     with sqlite3.connect(DB) as conn:
         comments = conn.execute("SELECT * FROM comments ORDER BY created DESC").fetchall()
+        conn.commit()
 
 
     return render_template('comms.html', comments=comments)
